@@ -1,10 +1,12 @@
 #include <stdio.h>
+#define _USE_MATH_DEFINES
+#include <math.h>
 
 int main()
 {
-    double T = 365;
-    double T1 = (1 / (double)(4 + 1 / (double)(7 + 1 / (double)(1 + (double)1/3))));
-    double T2 = T + T1;
-    printf("%f\n", T2);
-    //printf("T = %g", T2);
+    double r, h;
+    scanf("%lf %lf", &r, &h);
+    double s = M_PI * r * r;
+    double v = s * h * (double)1/3;
+    printf("\nv = %lf", v);
 }
